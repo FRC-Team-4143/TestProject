@@ -8,7 +8,7 @@ class OI {
 public:
 	OI();
 
-	double GetX() const;
+	double GetXAxis() const;
 
 private:
 	static frc::XboxController& _GetController();

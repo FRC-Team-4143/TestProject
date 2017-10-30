@@ -15,7 +15,7 @@ void ThingRun::Initialize() {
 // ==========================================================================
 
 void ThingRun::Execute() {
-	Robot::thing->Set(Robot::oi->GetX());
+	Robot::thing->Set(Robot::oi->GetXAxis());
 }
 
 // ==========================================================================
