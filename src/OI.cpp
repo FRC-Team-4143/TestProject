@@ -2,13 +2,15 @@
 #include "Commands/ThingRun.h"
 #include "Modules/ControllerHelper.h"
 
+using frc4143::ControllerHelper;
+
 constexpr double AXIS_DEAD_ZONE = 0.15;
 
 // ==========================================================================
 
 OI::OI() {
 	auto cmdThingRun = new ThingRun();
-	auto btnThingRun = frc4143::ControllerHelper::GetButton(frc4143::ControllerHelper::Button::X);
+	auto btnThingRun = ControllerHelper::GetButton(ControllerHelper::Button::X);
 	btnThingRun->WhileHeld(cmdThingRun);
 }
 
@@ -39,7 +41,7 @@ std::shared_ptr<frc::XboxController> OI::_GetController() {
 	static std::shared_ptr<frc::XboxController> _controller;
 
 	if (!_controller) {
-		_controller = frc4143::ControllerHelper::GetController(0);
+		_controller = ControllerHelper::GetController(0);
 	}
 
 	return _controller;
